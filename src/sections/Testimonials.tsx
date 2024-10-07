@@ -67,7 +67,7 @@ const testimonials = [
   },
 ];
 
-const firstColumn = testimonials.slice(0, 3);
+const firstColumn = testimonials.slice(0, 3); 
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 
@@ -77,33 +77,32 @@ export const Testimonials = () => {
       <div className="container">
         <div className="flex justify-center">
           <div className="tag">Testimonials</div>
-          </div>
-        <h2 className="section-title mt-5">What our says say</h2>
-        <p className="section-description mt-5">From intuituve design to powerful features, our app has become an
-          essential tool for users around the world.
+        </div>
+        <h2 className="section-title mt-5">What our users say</h2>
+        <p className="section-description mt-5">
+          From intuituve design to powerful features, our app has become an essential tool
+          for users around the world.
         </p>
-        <div className='flex justify-center'>
-        <div className="flex flex-col gap-6 mt-10 [mask-image:linear_gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
+        <div className="flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
           {firstColumn.map(({ text, imageSrc, name, username }) => (
-            <div key={name} className="card">
+            <div className="card">
               <div>{text}</div>
               <div className="flex items-center gap-2 mt-5">
                 <Image
-                  src={imageSrc} 
+                  src={imageSrc}
                   alt={name}
+                  width={40}
                   height={40}
-                  width={40} 
                   className="rounded-full"
-                /> 
+                />
                 <div className="flex flex-col">
-                  <div className='font-medium tracking-tight leading-5'>{name}</div>
-                  <div className='leading-5'>{username}</div>
+                  <div className="font font-medium leading-5 tracking-tight">{name}</div>
+                  <div className="leading-5 tracking-tight">{username}</div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-       </div>
       </div>
     </section>
   );
