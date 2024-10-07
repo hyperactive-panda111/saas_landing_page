@@ -100,7 +100,7 @@ export const Testimonials = () => {
   return (
     <section className="bg-white">
       <div className="container">
-        <div className="section-header">
+        <div className="section-heading">
           <div className="flex justify-center">
             <div className="tag">Testimonials</div>
           </div>
