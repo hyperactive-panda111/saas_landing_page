@@ -82,9 +82,10 @@ export const Testimonials = () => {
         <p className="section-description mt-5">From intuituve design to powerful features, our app has become an
           essential tool for users around the world.
         </p>
+        <div className='flex justify-center'>
         <div className="flex flex-col gap-6 mt-10 [mask-image:linear_gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
           {firstColumn.map(({ text, imageSrc, name, username }) => (
-            <div className="card">
+            <div key={name} className="card">
               <div>{text}</div>
               <div className="flex items-center gap-2 mt-5">
                 <Image
@@ -102,6 +103,7 @@ export const Testimonials = () => {
             </div>
           ))}
         </div>
+       </div>
       </div>
     </section>
   );
