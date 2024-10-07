@@ -2,11 +2,12 @@ import ArrowRight from '@/assets/arrow-right.svg';
 import Logo from '@/assets/logosaas.png';
 import MenuIcon from '@/assets/menu.svg';
 
+
 import Image from 'next/image';
 
 export const Header = () => {
   return (
-    <header className='sticky top-0'>
+    <header className='sticky top-0 backdrop-blur-sm z-20'>
       <div className='flex justify-center items-center py-3 bg-black text-white text-sm gap-3'>
         <p className='text-white/60 hidden md:block'>Streamline your workflow and boost your productivity</p>
         <div className='inline-flex gap-1 items-center'>
